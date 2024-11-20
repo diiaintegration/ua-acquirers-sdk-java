@@ -1,0 +1,50 @@
+{
+    "requestId": "abc1234d-1234-1234-1234-1a2b3c4d5e6f",
+    "barcode": "1213187292345",
+    "documentTypes": [
+        "foreign-passport",
+        "internal-passport"
+    ],
+    "data": {
+        "foreign-passport": [{
+            "taxpayerNumber": "1234567890",
+            "residenceUA": "УКРАЇНА М. КИЇВ ВУЛ. ЦИФРОВІЗАЦІЇ БУД. 25 КВ. 18",
+            "docNumber": "AA123456",
+            "genderUA": "Ж",
+            "nationalityUA": "Україна",
+            "lastNameUA": "Дія",
+            "firstNameUA": "Надія",
+            "middleNameUA": "Володимирівна",
+            "birthday": "24.01.1980",
+            "birthPlaceUA": "М.КИЇВ",
+            "issueDate": "19.04.2017",
+            "expirationDate": "19.04.2027",
+            "recordNumber": "19800124-12345",
+            "departmentUA": "8089",
+            "countryCode": "UKR",
+            "genderEN": "F",
+            "lastNameEN": "Diia",
+            "firstNameEN": "Nadiia",
+            "departmentEN": "8089"
+        }],
+        "internal-passport": [{
+            "taxpayerNumber": "1234567890",
+            "residenceUA": "УКРАЇНА М. КИЇВ ВУЛ. ЦИФРОВІЗАЦІЇ БУД. 25 КВ. 18",
+            "docNumber": "123456789",
+            "genderUA": "Ж",
+            "nationalityUA": "Україна",
+            "lastNameUA": "ДІЯ",
+            "firstNameUA": "НАДІЯ",
+            "middleNameUA": "ВОЛОДИМИРІВНА",
+            "birthday": "24.01.1980",
+            "birthPlaceUA": "М. КИЇВ УКРАЇНА",
+            "issueDate": "13.12.2009",
+            "expirationDate": "13.12.2023",
+            "recordNumber": "12345678-12345",
+            "department": "1234",
+            "genderEN": "F",
+            "lastNameEN": "DIIA",
+            "firstNameEN": "NADIIA"
+        }]
+    }
+}

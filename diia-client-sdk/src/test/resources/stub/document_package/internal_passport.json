@@ -1,0 +1,19 @@
+{
+    "taxpayerNumber": "1234567890",
+    "residenceUA": "УКРАЇНА М. КИЇВ ВУЛ. ЦИФРОВІЗАЦІЇ БУД. 25 КВ. 18",
+    "docNumber": "123456789",
+    "genderUA": "Ж",
+    "nationalityUA": "Україна",
+    "lastNameUA": "ДІЯ",
+    "firstNameUA": "НАДІЯ",
+    "middleNameUA": "ВОЛОДИМИРІВНА",
+    "birthday": "24.01.1980",
+    "birthPlaceUA": "М. КИЇВ УКРАЇНА",
+    "issueDate": "13.12.2009",
+    "expirationDate": "13.12.2023",
+    "recordNumber": "12345678-12345",
+    "department": "1234",
+    "genderEN": "F",
+    "lastNameEN": "DIIA",
+    "firstNameEN": "NADIIA"
+}
