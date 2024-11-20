@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign document by Diia ID</title>
+</head>
+<body>
+<p><a href="./">Home</a></p>
+<h2>To sign file(s)</h2>
+<p>
+    open this URL in your <strong>mobile phone</strong> browser
+</p>
+<a th:href="${deeplink}" th:text="${deeplink}"></a>
+<p>or scan this QR code</p>
+<img th:src="${qrCodeImageBase64}"/>
+<p>
+    When you complete sign the result will be available by
+    <a th:href="'./show-signed/' + ${requestId}" target="_blank">this link</a>
+</p>
+</body>
+</html>

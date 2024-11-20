@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Requesting document by deeplink</title>
+</head>
+<body>
+<p><a href="./">Home</a></p>
+<h2>To share your document</h2>
+<p>
+    open this URL in your <strong>mobile phone</strong> browser
+</p>
+<a th:href="${deeplink}" th:text="${deeplink}"></a>
+<p>or scan this QR code</p>
+<img th:src="${qrCodeImageBase64}"/>
+<p>
+    When you complete document sharing you can see it by
+    <a th:href="'./show-document/' + ${requestId}" target="_blank">this link</a>
+</p>
+</body>
+</html>

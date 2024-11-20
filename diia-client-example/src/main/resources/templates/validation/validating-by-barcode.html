@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validating by barcode</title>
+</head>
+<body>
+<p><a href="./">Home</a></p>
+<h2>To validate your document</h2>
+
+<img src="./img/barcode.jpg" width="100" th:src="@{./img/barcode.jpg}" />
+<p>
+    enter the barcode from the back-side of document.
+</p>
+<p>
+    Note: use actual barcode from actual document. In other cases you'll receive an exception.
+</p>
+<form action="#" method="post"></p>
+    <p>Branch ID: <select name="branchId">
+        <option th:each="branch: ${branches}"
+                th:value="${branch.getId().getId()}"
+                th:text="${branch.getName()}"></option>
+    </select></p>
+    <p>Barcode: <input type="text" name="barcode"/></p>
+    <p><input type="submit"></p>
+</form>
+</body>
+</html>

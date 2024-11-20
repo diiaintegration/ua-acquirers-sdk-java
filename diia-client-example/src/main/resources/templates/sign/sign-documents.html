@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign document by Diia ID</title>
+</head>
+<body>
+<p><a href="./">Home</a></p>
+<h2>Sign documents by Diia ID</h2>
+
+<form action="#" method="post" enctype="multipart/form-data">
+    <p>Offer ID: <select name="branchAndOfferId">
+        <optgroup th:each="branchOffers: ${branchesOffers}" th:label="${branchOffers.getBranch().getName()}">
+            <option th:each="offer: ${branchOffers.getOffers()}"
+                    th:value="${branchOffers.getBranch().getId().getId() + '!' +offer.getId().getId()}"
+                    th:text="${offer.getName()}"></option>
+        </optgroup>
+    </select></p>
+    <p>Request Id: <input type="text" name="requestId" th:value="${requestId}"/></p>
+    <p>File(s) to sign: <input type="file" name="files" multiple/></p>
+    <p><input type="submit"></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+    "global": {
+        "crypto.dstu.env_data_for_diia.storage.b64": "<base64String>",
+        "crypto.dstu.env_data_for_diia.storage.password.enc": "<password>",
+        "crypto.dstu.env_data_for_diia.subjKeyId": "<subjectKey>",
+        "crypto.dstu.env_data_for_diia.cert.b64": "<base64String>",
+        "crypto.trusted_certs_for_diia": [
+            "<base64String>",
+            "<base64String>"
+        ]
+    },
+    "uapki": {
+        "cmProviders": {
+            "allowedProviders": [ { "lib": "cm-pkcs12" } ]
+        },
+        "certCache": {
+            "trustedCerts": [
+                "<base64String>",
+                "<base64String>"
+            ]
+        },
+        "offline": false,
+        "reportTime": false
+    }
+}

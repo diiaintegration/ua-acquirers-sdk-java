@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create new offer</title>
+</head>
+<body>
+<p><a href="./">Home</a></p>
+<h2>Create new offer on branch</h2>
+
+<form action="#" method="post">
+    <p>Branch: <select name="branchId">
+        <option th:each="branch: ${branches}" th:value="${branch.getId().getId()}" th:text="${branch.getName()}"></option>
+    </select></p>
+    <p>Name: <input type="text" name="name"/>
+    <p>ReturnLink: <input type="text" name="returnLink"/>
+    <p>
+        OfferScopes.Sharing (comma-separated): <input type="text" name="sharing" /><br/>
+        <small>Available: passport,internal-passport,foreign-passport,taxpayer-card,driver-license,vehicle-license</small><br/>
+        <small>Example: passport</small>
+    </p>
+    <p>
+        OfferScopes.DiiaId (comma-separated): <input type="text" name="diiaId" /><br/>
+        <small>Available: auth,hashedFilesSigning</small><br/>
+        <small>Example: auth</small>
+    </p>
+    <p><input type="submit"></p>
+</form>
+</body>
+</html>

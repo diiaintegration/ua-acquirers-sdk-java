@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create new branch</title>
+</head>
+<body>
+<p><a href="./">Home</a></p>
+<h2>Create new branch</h2>
+
+<form action="#" method="post"></p>
+    <p>Name: <input type="text" name="name"/></p>
+    <p>Email: <input type="text" name="email"/></p>
+    <p>Region: <input type="text" name="region"/></p>
+    <p>District: <input type="text" name="district"/></p>
+    <p>Location: <input type="text" name="location"/></p>
+    <p>Street: <input type="text" name="street"/></p>
+    <p>House: <input type="text" name="house"/></p>
+    <p>CustomFullName: <input type="text" name="customFullName"/></p>
+    <p>CustomFullAddress: <input type="text" name="customFullAddress"/></p>
+    <p>
+        BranchScopes.Sharing (comma-separated): <input type="text" name="sharing" /><br/>
+        <small>Available: passport,internal-passport,foreign-passport,taxpayer-card,driver-license,vehicle-license</small><br/>
+        <small>Example: passport,taxpayer-card</small>
+    </p>
+    <p>
+        BranchScopes.DocumentIdentification (comma-separated): <input type="text" name="documentIdentification" /><br/>
+        <small>Available: internal-passport,foreign-passport,taxpayer-card</small><br/>
+        <small>Example: internal-passport,foreign-passport</small>
+    </p>
+    <p>
+        BranchScopes.DiiaId (comma-separated): <input type="text" name="diiaId" /><br/>
+        <small>Available: auth,hashedFilesSigning</small><br/>
+        <small>Example: hashedFilesSigning</small>
+    </p>
+    <p><input type="submit"></p>
+</form>
+</body>
+</html>

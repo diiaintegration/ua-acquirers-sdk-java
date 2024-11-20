@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete offer</title>
+</head>
+<body>
+<p><a href="./">Home</a></p>
+<h2>Delete offer on branch</h2>
+
+<form action="#" method="post"></p>
+    <p>Offer ID: <select name="branchAndOfferId">
+        <optgroup th:each="branchOffers: ${branchesOffers}" th:label="${branchOffers.getBranch().getName()}">
+            <option th:each="offer: ${branchOffers.getOffers()}"
+                    th:value="${branchOffers.getBranch().getId().getId() + '!' +offer.getId().getId()}"
+                    th:text="${offer.getName()}"></option>
+        </optgroup>
+    </select></p>
+    <p><input type="submit"></p>
+</form>
+</body>
+</html>

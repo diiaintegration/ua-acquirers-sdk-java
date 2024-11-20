@@ -1,0 +1,1 @@
+Interface for crypto service used to decrypt received documents

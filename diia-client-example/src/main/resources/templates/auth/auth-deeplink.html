@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authorization by Diia ID</title>
+</head>
+<body>
+<p><a href="./">Home</a></p>
+<h2>To perform authorization</h2>
+<p>
+    open this URL in your <strong>mobile phone</strong> browser
+</p>
+<a th:href="${deeplink}" th:text="${deeplink}"></a>
+<p>or scan this QR code</p>
+<img th:src="${qrCodeImageBase64}"/>
+<p>
+    When you complete authorization the result will be available by
+    <a th:href="'./show-auth/' + ${requestIdHash}" target="_blank">this link</a>
+</p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All offers</title>
+    <style>
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<p><a href="./">Home</a></p>
+<h2>List of all registered offers on branches</h2>
+<div th:each="branchOffers: ${branchesOffers}">
+    <p th:text="'Branch ID: ' + ${branchOffers.getBranch().getId().getId()}"/>
+    <table>
+        <tr th:each="offer: ${branchOffers.getOffers()}" border="1">
+            <td>
+                <p th:text="'ID: ' + ${offer.id}"/>
+                <p th:text="'Name: ' + ${offer.name}"/>
+                <p th:text="'Return link: ' + ${offer.returnLink}"/>
+                <p>Scopes.Sharing</p>
+                <p>
+                <ul>
+                    <li th:each="sharing: ${offer.getScopes().getSharing()}"><span th:text="${sharing}"></span></li>
+                </ul>
+                </p>
+                <p>Scopes.DiiaId</p>
+                <p>
+                <ul>
+                    <li th:each="diiaId: ${offer.getScopes().getDiiaId()}"><span th:text="${diiaId}"></span></li>
+                </ul>
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

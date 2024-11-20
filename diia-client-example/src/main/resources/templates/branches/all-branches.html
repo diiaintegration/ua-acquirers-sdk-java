@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All branches</title>
+    <style>
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<p><a href="./">Home</a></p>
+<h2>List of all registered branches</h2>
+<table>
+    <tr th:each="branch: ${branches}" border="1">
+        <td>
+            <p th:text="'ID: ' + ${branch.id}"/>
+            <p th:text="'Name: ' + ${branch.name}"/>
+            <p th:text="'Email: ' + ${branch.email}"/>
+            <p th:text="'District: ' + ${branch.district}"/>
+            <p th:text="'Location: ' + ${branch.location}"/>
+            <p th:text="'Street: ' + ${branch.street}"/>
+            <p th:text="'House: ' + ${branch.house}"/>
+            <p th:text="'CustomFullName: ' + ${branch.customFullName}"/>
+            <p th:text="'CustomFullAddress: ' + ${branch.customFullAddress}"/>
+            <p th:text="'OfferRequestType: ' + ${branch.offerRequestType}"/>
+            <p>DeliveryTypes</p>
+            <p>
+                <ul>
+                    <li th:each="type: ${branch.getDeliveryTypes()}"><span th:text="${type}"></span></li>
+                </ul>
+            </p>
+            <p>BranchScopes.Sharing</p>
+            <p>
+                <ul>
+                    <li th:each="sharing: ${branch.getScopes().getSharing()}"><span th:text="${sharing}"></span></li>
+                </ul>
+            </p>
+            <p>BranchScopes.Identification</p>
+            <p>
+                <ul>
+                    <li th:each="identification: ${branch.getScopes().getIdentification()}"><span th:text="${identification}"></span></li>
+                </ul>
+            </p>
+            <p>BranchScopes.DocumentIdentification</p>
+            <p>
+                <ul>
+                    <li th:each="documentIdentification: ${branch.getScopes().getDocumentIdentification()}"><span th:text="${documentIdentification}"></span></li>
+                </ul>
+            </p>
+            <p>BranchScopes.DiiaId</p>
+            <p>
+            <ul>
+                <li th:each="diiaId: ${branch.getScopes().getDiiaId()}"><span th:text="${diiaId}"></span></li>
+            </ul>
+            </p>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
