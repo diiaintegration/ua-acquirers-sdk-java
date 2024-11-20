@@ -1,0 +1,1 @@
+Due to the fact that the file EUSignJava-10.jar exceeds 25 megabytes, it cannot be uploaded to the lib repository. In this case, we recommend reaching out in the chat to obtain this file.
